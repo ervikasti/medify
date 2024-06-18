@@ -1,0 +1,24 @@
+.swiper-button-prev,
+.swiper-button-next {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  /* Add more styles as needed */
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 20px;
+}
+
+.time{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: column;
+}
+
+.time_slot{
+  display: flex;
+}

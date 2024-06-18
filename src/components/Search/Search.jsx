@@ -3,7 +3,7 @@ const Search = ({stateList, city, handleSelect}) => {
 
     return(
         <div>
-            <label for="state">State</label>
+            <label htmlFor="state">State</label>
 
             <select name="state" id="state" onChange={handleSelect}>
                 {stateList.map((value,index)=>(
@@ -12,7 +12,7 @@ const Search = ({stateList, city, handleSelect}) => {
                 
             </select>
 
-            <label for="city">City</label>
+            <label htmlFor="city">City</label>
 
             <select name="city" id="city" onChange={handleSelect}>
                 {city && city.map((value,index)=>(

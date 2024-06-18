@@ -1,6 +1,6 @@
 .container{
     background-color: #EFF5FE;
-    width: 786px;
+    width: 500px;
     height: 269px;
     top: 480px;
     left: 130px;
@@ -11,4 +11,9 @@
     border-radius: 2px;
     display: flex;
     margin: 0.5rem;
+    justify-content: space-between;
+}
+
+.container_details{
+    
 }
