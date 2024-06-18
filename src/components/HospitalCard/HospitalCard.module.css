@@ -1,0 +1,14 @@
+.container{
+    background-color: #EFF5FE;
+    width: 786px;
+    height: 269px;
+    top: 480px;
+    left: 130px;
+    padding: 3px;
+    gap: 0px;
+    border: 0px 0px 1px 0px;
+    opacity: 0px;
+    border-radius: 2px;
+    display: flex;
+    margin: 0.5rem;
+}
