@@ -3,7 +3,7 @@ import BookingForm from "../BookingForm/BookingForm";
 import styles from "./HospitalCard.module.css";
 
 const HospitalCard = ({ hospitalList }) => {
-  console.log(hospitalList);
+  // console.log(hospitalList);
 
   const Details = ({ key, name, city, state, type, rating }) => {
     const [bookingFormIsActive, setBookingFormIsActive] = useState(false);
@@ -27,6 +27,12 @@ const HospitalCard = ({ hospitalList }) => {
             <button
               onClick={() => {
                 setBookingFormIsActive(!bookingFormIsActive);
+                localStorage.setItem("name", JSON.stringify(name));
+                localStorage.setItem("city", JSON.stringify(city));
+                localStorage.setItem("state", JSON.stringify(state));
+                localStorage.setItem("type", JSON.stringify(type));
+                localStorage.setItem("rating", JSON.stringify(rating));
+                localStorage.setItem("id", JSON.stringify(key));
               }}
             >
               Book a free center visit
