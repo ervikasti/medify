@@ -1,7 +1,6 @@
 import styles from "../components/HospitalCard/HospitalCard.module.css";
 import { Navbar } from "../components/Navbar/Navbar";
 const Booking = () => {
-  // const key = JSON.parse(localStorage.getItem("id"));
   const name = JSON.parse(localStorage.getItem("name"));
   const city = JSON.parse(localStorage.getItem("city"));
   const state = JSON.parse(localStorage.getItem("state"));
