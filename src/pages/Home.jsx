@@ -92,6 +92,9 @@ const Home = () => {
 
   return (
     <div>
+      <div
+        className={styles.floating_banner}
+      >{`The health and well-being of our patients and their health care team will always be our priority, so we follow the best practices for cleanliness.`}</div>
       <Navbar></Navbar>
       {hospitalList && searchBtnCliked ? (
         <HospitalCard hospitalList={hospitalList}></HospitalCard>
@@ -105,7 +108,29 @@ const Home = () => {
               city={cityList}
             ></Search>
           )}
-          <Sliders />
+          {/* offer slider */}
+          <Sliders
+            data={[
+              "offerImage1",
+              "offerImg2",
+              "offerImage1",
+              "offerImg2",
+              "offerImage1",
+              "offerImg2",
+            ]}
+          />
+          {/* doctors specialist sliders */}
+          <h4>Our Medical Specilist</h4>
+          <Sliders
+            data={[
+              "doctor1",
+              "doctor2",
+              "doctor3",
+              "doctor1",
+              "doctor2",
+              "doctor3",
+            ]}
+          />
         </div>
       )}
     </div>

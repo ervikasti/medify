@@ -31,3 +31,14 @@
 .hero_container_image img {
   max-height: 37.5rem;
 }
+
+.floating_banner {
+  background-color: #2aa7ff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  height: 40px;
+  border-color: #2aa7ff;
+}

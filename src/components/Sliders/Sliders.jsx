@@ -10,7 +10,7 @@ import "./Sliders.css";
 // import required modules
 import { Pagination } from "swiper/modules";
 
-export default function Sliders() {
+export default function Sliders({ data }) {
   return (
     <>
       <Swiper
@@ -22,14 +22,17 @@ export default function Sliders() {
         modules={[Pagination]}
         className={"swiper"}
       >
-        <SwiperSlide className={`swiper - slide`}>
-          <img src="/images/offerImage1.svg" />
-        </SwiperSlide>
-        <SwiperSlide className={`swiper - slide`}>Slide 2</SwiperSlide>
+        {data.map((value, index) => (
+          <SwiperSlide className={`swiper - slide`}>
+            <img src={`/images/${value}.svg`} alt={value} />
+          </SwiperSlide>
+        ))}
+
+        {/* <SwiperSlide className={`swiper - slide`}>Slide 2</SwiperSlide>
         <SwiperSlide className={`swiper - slide`}>Slide 3</SwiperSlide>
         <SwiperSlide className={`swiper - slide`}>Slide 4</SwiperSlide>
         <SwiperSlide className={`swiper - slide`}>Slide 5</SwiperSlide>
-        <SwiperSlide className={`swiper - slide`}>Slide 6</SwiperSlide>
+        <SwiperSlide className={`swiper - slide`}>Slide 6</SwiperSlide> */}
       </Swiper>
     </>
   );

@@ -4,4 +4,6 @@
   padding: 0.7rem 2rem;
   color: white;
   border-color: #2aa7ff;
+  margin: 2px;
+  cursor: pointer;
 }
