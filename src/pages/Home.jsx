@@ -3,7 +3,6 @@ import { Navbar } from "../components/Navbar/Navbar";
 import axios from "axios";
 import { Search } from "../components/Search/Search";
 import { HospitalCard } from "../components/HospitalCard/HospitalCard";
-import BookingForm from "../components/BookingForm/BookingForm";
 
 const Home = () => {
   const [stateList, setStateList] = useState();
