@@ -12,8 +12,6 @@ const Navbar = () => {
     "facilities",
   ];
 
-  const handleMyBooking = () => {};
-
   return (
     <nav className={styles.navbar}>
       <Link to="/">
