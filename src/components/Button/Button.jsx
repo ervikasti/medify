@@ -1,7 +1,10 @@
-const Button = (btn_name) => {
-    return(
-        <button>{btn_name}</button>
-    )
-}
+import styles from "./Button.module.css";
+const Button = ({ id, value, click }) => {
+  return (
+    <button id={id} className={styles.button_primary} onClick={click}>
+      {value}
+    </button>
+  );
+};
 
-export {Button}
+export { Button };

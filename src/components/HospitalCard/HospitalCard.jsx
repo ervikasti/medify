@@ -1,5 +1,6 @@
 import { useState } from "react";
 import BookingForm from "../BookingForm/BookingForm";
+import { Button } from "../Button/Button";
 import styles from "./HospitalCard.module.css";
 
 const HospitalCard = ({ hospitalList }) => {
@@ -24,8 +25,9 @@ const HospitalCard = ({ hospitalList }) => {
           </div>
           <div>
             <div>Status</div>
-            <button
-              onClick={() => {
+            <Button
+              value={"Book a free center visit"}
+              click={() => {
                 setBookingFormIsActive(!bookingFormIsActive);
                 localStorage.setItem("name", JSON.stringify(name));
                 localStorage.setItem("city", JSON.stringify(city));
@@ -34,9 +36,7 @@ const HospitalCard = ({ hospitalList }) => {
                 localStorage.setItem("rating", JSON.stringify(rating));
                 localStorage.setItem("id", JSON.stringify(key));
               }}
-            >
-              Book a free center visit
-            </button>
+            ></Button>
           </div>
         </div>
         {bookingFormIsActive && <BookingForm></BookingForm>}
@@ -47,7 +47,7 @@ const HospitalCard = ({ hospitalList }) => {
   return (
     <>
       <div>
-        {hospitalList.length} medical center avalilable in{" "}
+        {hospitalList.length} medical center avalilable
         {/* {hospitalList[0].City} */}
       </div>
       {hospitalList.map((data) => (

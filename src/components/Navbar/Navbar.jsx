@@ -1,5 +1,6 @@
 import styles from "./Navbar.module.css";
 import { Outlet, Link } from "react-router-dom";
+import { Button } from "../Button/Button";
 
 const Navbar = () => {
   const company_name = "Medify";
@@ -26,7 +27,7 @@ const Navbar = () => {
         ))}
 
         <Link to="/booking">
-          <button>My Booking</button>
+          <Button value={"My Booking"} />
         </Link>
       </div>
     </nav>

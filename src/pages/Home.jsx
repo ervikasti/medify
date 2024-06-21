@@ -3,6 +3,9 @@ import { Navbar } from "../components/Navbar/Navbar";
 import axios from "axios";
 import { Search } from "../components/Search/Search";
 import { HospitalCard } from "../components/HospitalCard/HospitalCard";
+import styles from "./Home.module.css";
+import { Button } from "../components/Button/Button";
+import Sliders from "../components/Sliders/Sliders";
 
 const Home = () => {
   const [stateList, setStateList] = useState();
@@ -52,7 +55,7 @@ const Home = () => {
   }, [selectedState, selectedCity, searchBtnCliked]);
 
   const handleSelect = (e) => {
-    // console.log(e.target.id);
+    console.log(e);
     if (e.target.id === "state") {
       setSelectedState(e.target.value);
     } else if (e.target.id === "city") {
@@ -66,20 +69,35 @@ const Home = () => {
     }
   };
 
+  const Hero = () => {
+    return (
+      <section className={styles.hero_container}>
+        <section className={styles.hero_container_details}>
+          <h3>skip the travel! Find Online</h3>
+          <h1>
+            Medical <span style={{ color: "#2aa7ff" }}>Centers</span>
+          </h1>
+          <p>
+            Connect instantly with a 24x7 specialist or choose to video visit a
+            particular doctor.
+          </p>
+          <Button value={"Find Centers"} />
+        </section>
+        <section className={styles.hero_container_image}>
+          <img src="/images/hero_image.svg" alt="hero_image" />
+        </section>
+      </section>
+    );
+  };
+
   return (
     <div>
       <Navbar></Navbar>
       {hospitalList && searchBtnCliked ? (
-        <>
-          <h1>Search btn Clicked loading hospital details</h1>
-          <HospitalCard hospitalList={hospitalList}></HospitalCard>
-        </>
+        <HospitalCard hospitalList={hospitalList}></HospitalCard>
       ) : (
-        <div>
-          <section>
-            <section>Part 1</section>
-            <section>Part 2</section>
-          </section>
+        <div className={styles.home_container}>
+          <Hero />
           {stateList && (
             <Search
               stateList={stateList}
@@ -87,6 +105,7 @@ const Home = () => {
               city={cityList}
             ></Search>
           )}
+          <Sliders />
         </div>
       )}
     </div>
