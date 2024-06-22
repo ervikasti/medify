@@ -1,5 +1,5 @@
 import styles from "./Navbar.module.css";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "../Button/Button";
 
 const Navbar = () => {

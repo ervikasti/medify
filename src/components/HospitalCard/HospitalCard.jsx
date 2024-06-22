@@ -1,6 +1,7 @@
 import { useState } from "react";
 import BookingForm from "../BookingForm/BookingForm";
 import { Button } from "../Button/Button";
+import { Search } from "../Search/Search";
 import styles from "./HospitalCard.module.css";
 
 const HospitalCard = ({ hospitalList }) => {
